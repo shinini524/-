@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <style>
+        /* CSS: 디자인을 담당합니다 */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 300px;
+            height: 150px;
+            background-color: #f0f0f0;
+            /* 백그라운드-컬러: 배경색 */
+            border: 2px solid #333;
+            /* 보더: 테두리 */
+            display: flex;
+            /* 디스플레이: 플렉스 (중앙 정렬을 위해 사용) */
+            align-items: center;
+            /* 얼라인-아이템즈: 수직 중앙 */
+            justify-content: center;
+            /* 저스티파이-컨텐츠: 수평 중앙 */
+            margin: 20px auto;
+            font-size: 20px;
+            /* 폰트-사이즈: 글자 크기 */
+            transition: 0.3s;
+            /* 트랜지션: 부드러운 변화 */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            /* 커서: 포인터 (마우스 올리면 손가락 모양) */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>제이쿼리 첫걸음</h1>
+
+        <div class="box" id="myBox">
+            여기를 바꿔보세요!
+        </div>
+
+        <button id="changeBtn">변신 버튼</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#changeBtn").click(function(){
+                $("#myBox").text("짠! 변신완료");
+            })
+        })
+    </script>
+
+</body>
+
+</html>

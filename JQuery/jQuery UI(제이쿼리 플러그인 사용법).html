@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Accordion - Default functionality</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <script>
+
+        $(function () {
+    $(".qna").accordion({
+        active: false,      // 처음에 열려있는 패널 없음
+        collapsible: true   // 모든 패널을 닫을 수 있게 허용
+    });
+    
+    $(document).tooltip();
+});
+    </script>
+    <style>
+        .row{
+            display: flex;
+        }
+        .col-6{
+            width: 50%;
+        }
+        .qna-title{
+            background-color: cornflowerblue;
+            border: 1px solid plum;
+        }
+
+        /*  */
+        .qna .ui-accordion-header {
+    position: relative;
+    padding-right: 30px; /* 오른쪽 공간 확보 */
+}
+
+.qna .ui-accordion-header .ui-accordion-header-icon {
+    position: absolute;
+    right: 10px;
+    left: auto; /* 기존 left 제거 */
+}
+    </style>
+</head>
+
+<body>
+    <section class="content">
+        <div class="row">
+            <div class="col-6">
+                <h3>자주묻는질문</h3>
+            </div>
+            <div class="col-6">
+                <div class="qna">
+                    <h3 class="qna-title">태경이는 오늘 점심을 살까요?</h3>
+                    <div class="qna-body">
+                        <p>태경이는 오늘 <a href="#" title="사줘?">점심을</a>사줄 수가 없습니다.</p>
+                        <p>지각을 했기 때문</p>
+                    </div>
+                    <h3 class="qna-title">태경이는 오늘 점심을 살까요?</h3>
+                    <div class="qna-body">
+                        <p>태경이는 오늘 점ㄱ심을 사줄 수가 없습니다.</p>
+                        <p>지각을 했기 때문</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
